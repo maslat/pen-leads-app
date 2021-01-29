@@ -1,0 +1,17 @@
+doctype html
+html(lang='en')
+  include common/head.pug
+  +head("Redirect to log in")
+  body
+    header
+      include common/nav.pug
+      +navbar(user)
+      .container
+        .row.align-items-center
+          .col-md-6.order-md-1.text-center.text-md-left.pr-md-5
+            h1.mb-3 In order to access this page you must have a user account!
+            p.lead Please log in or create a user by clicking sign up!
+                p.mt-2.mb-0  Already have an account? #[a(href="/login") Login here]  
+                p.mt-2.mb-0 Don't have an account? #[a(href="/signup") Sign up!]  
+    include common/footer.pug
+    +footer()
